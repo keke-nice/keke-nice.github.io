@@ -36,9 +36,9 @@ Selected Publications
     <img src="../images/CoEmoGen.png" alt="Paper Image" style="width: 300px; margin-right: 20px;">
     <div>
         <strong>CoEmoGen: Towards Semantically-Coherent and Scalable Emotional Image Content Generation</strong><br>
-        <em><strong>Kaishen Yuan*, Yuting Zhang*</strong>, Shang Gao, Yijie Zhu, Wenshuo Chen, Yutao Yue</em><br>
+        <em>Kaishen Yuan*, <strong>Yuting Zhang*</strong>, Shang Gao, Yijie Zhu, Wenshuo Chen, Yutao Yue</em><br>
         <em>International Conference on Learning Representations (ICLR) 2026</em><br>
-        <a href="https://arxiv.org/pdf/2506.18512">Paper</a> | <a href="https://github.com/keke-nice/MedTVT-R1">Code</a>
+        <a href="https://arxiv.org/abs/2508.03535">Paper</a> | <a href="https://github.com/yuankaishen2001/CoEmoGen">Code</a>
     </div>
 </div>
 
