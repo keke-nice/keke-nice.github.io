@@ -51,3 +51,15 @@
     display: table;
   }
 }
+$rhythm-unit: px !default;
+$rem-with-px-fallback: false !default;
+
+/*
+   Box sizing fallback for older local Sass builds
+   ========================================================================== */
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}

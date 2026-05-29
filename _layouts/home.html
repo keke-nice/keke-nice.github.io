@@ -1,0 +1,150 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+{% assign author = site.author %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="home-template academic-home">
+    <a class="home-skip" href="#main">Skip to content</a>
+
+    <header class="academic-nav" aria-label="Primary">
+      <a class="academic-nav__brand" href="{{ '/' | relative_url }}">{{ author.name | default: site.title }}</a>
+      <nav class="academic-nav__links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="{{ '/cv/' | relative_url }}">CV</a>
+      </nav>
+    </header>
+
+    <main id="main" class="academic-main">
+      <div class="academic-content">
+        <section id="about" class="academic-section academic-section--intro" aria-labelledby="about-heading">
+          <div class="bio-layout">
+            <div class="bio-copy">
+              <h1 id="about-heading" class="academic-title">{{ author.name }}</h1>
+              <div class="bio-paragraphs">
+                {% for paragraph in page.intro_paragraphs %}
+                  <p class="{% if forloop.first %}academic-lede{% else %}academic-text bio-paragraph{% endif %}">{{ paragraph }}</p>
+                {% endfor %}
+              </div>
+
+              <div class="profile-inline" aria-label="Profile links">
+                {% if author.email %}
+                  <a href="mailto:{{ author.email }}">Email</a>
+                {% endif %}
+                {% if author.googlescholar %}
+                  <a href="{{ author.googlescholar }}">Google Scholar</a>
+                {% endif %}
+                {% if author.github %}
+                  <a href="https://github.com/{{ author.github }}">GitHub</a>
+                {% endif %}
+                {% if author.twitter %}
+                  <a href="https://twitter.com/{{ author.twitter }}">X / Twitter</a>
+                {% endif %}
+              </div>
+            </div>
+
+            {% if author.avatar %}
+              <img class="bio-photo" src="{{ author.avatar | prepend: '/images/' | relative_url }}" alt="{{ author.name }}">
+            {% endif %}
+          </div>
+        </section>
+
+        <section id="news" class="academic-section" aria-labelledby="news-heading">
+          <div class="academic-section__header">
+            <h2 id="news-heading">News</h2>
+          </div>
+          <ol class="news-list">
+            {% for item in page.news %}
+              <li>
+                <time>{{ item.date }}</time>
+                <span>{{ item.text }}</span>
+              </li>
+            {% endfor %}
+          </ol>
+        </section>
+
+
+        <section id="experience" class="academic-section" aria-labelledby="experience-heading">
+          <div class="academic-section__header">
+            <h2 id="experience-heading">Experience</h2>
+          </div>
+          <div class="experience-list">
+            {% for item in page.experience %}
+              <article class="experience-row">
+                <div class="experience-row__header">
+                  <h3>{{ item.organization }}</h3>
+                  <time>{{ item.period }}</time>
+                </div>
+                <p>{{ item.description }}</p>
+                {% if item.topic %}
+                  <p class="experience-row__topic">Topic: {{ item.topic }}</p>
+                {% endif %}
+                {% if item.mentor %}
+                  <p class="experience-row__mentor">Mentor: {{ item.mentor }}</p>
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section id="publications" class="academic-section" aria-labelledby="publications-heading">
+          <div class="academic-section__header">
+            <h2 id="publications-heading">Selected Publications</h2>
+          </div>
+
+          <div class="publication-list">
+            {% for pub in page.publications %}
+              <article class="publication-row">
+                <a class="publication-row__image" href="{{ pub.paper }}" aria-label="{{ pub.title }}">
+                  <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}">
+                </a>
+                <div class="publication-row__content">
+                  <p class="publication-row__venue">{{ pub.venue }}</p>
+                  <h3>{{ pub.title }}</h3>
+                  <p class="publication-row__authors">{{ pub.authors }}</p>
+                  <div class="publication-row__links">
+                    {% if pub.paper %}
+                      <a href="{{ pub.paper }}">Paper</a>
+                    {% endif %}
+                    {% if pub.code %}
+                      <a href="{{ pub.code }}">Code</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section id="misc" class="academic-section" aria-labelledby="misc-heading">
+          <div class="academic-section__header">
+            <h2 id="misc-heading">Misc</h2>
+          </div>
+          <div class="misc-copy">
+            {% for paragraph in page.misc %}
+              <p class="academic-text{% unless forloop.first %} bio-paragraph{% endunless %}">{{ paragraph }}</p>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="academic-footer">
+      <span>&copy; {{ site.time | date: '%Y' }} {{ author.name }}</span>
+      <span>Last updated {{ "now" | date: '%Y-%m-%d' }}</span>
+    </footer>
+
+    {% include scripts.html %}
+  </body>
+</html>
