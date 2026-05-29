@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 intro_paragraphs:
   - >
-    I am a second-year PhD student at the Hong Kong University of Science and Technology (Guangzhou), advised by <a href="https://scholar.google.com/citations?user=Vt-q3E4AAAAJ&hl=zh-CN">Dr. Kaishun Wu</a> and <a href="https://scholar.google.com/citations?user=ZiY3xYEAAAAJ&hl=zh-CN&oi=ao">Dr. Jintai Chen</a>. I am also a research intern at the <a href="https://yang-ai-lab.github.io/index.html">UCLA Health Intelligence Lab (HAIL)</a>, where I am fortunate to work with <a href="https://web.cs.ucla.edu/~yuzhe/">Dr. Yuzhe Yang</a>. Before that, I received my B.S. and M.S. degrees in Communication Engineering from Tianjin University in 2021 and 2024, respectively. During my master's study, I was advised by <a href="https://sites.google.com/view/xinliu/">Dr. Xin Liu</a> and collaborated with <a href="https://zitong-yu.github.io/yzt/">Dr. Zitong Yu</a>. My research interests include multimodal large language models, agents, and AI for healthcare.
+    I am a second-year PhD student in Data Science and Analytics at the Hong Kong University of Science and Technology (Guangzhou), advised by <a href="https://scholar.google.com/citations?user=Vt-q3E4AAAAJ&hl=zh-CN">Dr. Kaishun Wu</a> and <a href="https://scholar.google.com/citations?user=ZiY3xYEAAAAJ&hl=zh-CN&oi=ao">Dr. Jintai Chen</a>. I am also a research intern at the <a href="https://yang-ai-lab.github.io/index.html">UCLA Health Intelligence Lab (HAIL)</a>, where I am fortunate to work with <a href="https://web.cs.ucla.edu/~yuzhe/">Dr. Yuzhe Yang</a>. Before that, I received my B.S. and M.S. degrees in Communication Engineering from Tianjin University in 2021 and 2024, respectively. During my master's study, I was advised by <a href="https://sites.google.com/view/xinliu/">Dr. Xin Liu</a> and collaborated with <a href="https://zitong-yu.github.io/yzt/">Dr. Zitong Yu</a>. My research interests include multimodal large language models, agents, and AI for healthcare.
 experience:
   - organization: "Tencent WeChat Vision"
     period: "December 2025 - February 2026"
@@ -27,6 +27,15 @@ news:
     text: "One paper about MLLM is accepted by CVPR 2025."
   - date: "2024.9"
     text: "I enrolled at the Hong Kong University of Science and Technology (Guangzhou)."
+teaching:
+  - term: "2025-26 Spring"
+    code: "UCMP 6010-MI"
+    title: "Cross-disciplinary Research Methods I - MI"
+    role: "Teaching Assistant"
+  - term: "2025-26 Fall"
+    code: "DSAA 3051"
+    title: "Introduction to Natural Language Processing and Knowledge Engineering"
+    role: "Teaching Assistant"
 publications:
   - title: "MedTVT-R1: A Multimodal LLM Empowering Medical Reasoning and Diagnosis"
     image: "/images/MedTVT-R1.png"

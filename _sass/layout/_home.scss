@@ -258,6 +258,31 @@
   white-space: nowrap;
 }
 
+.teaching-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid #d9e2ec;
+}
+
+.teaching-row {
+  display: grid;
+  grid-template-columns: 8.2rem 7.2rem 8.8rem minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #d9e2ec;
+  color: #334e68;
+  font-size: 0.94rem;
+}
+
+.teaching-row time,
+.teaching-row__code,
+.teaching-row__role {
+  color: #102a43;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
 .publication-list {
   display: grid;
   gap: 0;
@@ -355,7 +380,8 @@
   }
 
   .publication-row,
-  .news-list li {
+  .news-list li,
+  .teaching-row {
     grid-template-columns: 1fr;
   }
 
